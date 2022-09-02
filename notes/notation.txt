@@ -1,0 +1,14 @@
+O (==) -> to boolean
+theta (>=) -> to boolean
+omega (<=) -> to boolean
+
+
+ungeneralized vs. generalized.
+edge cases at boundary of input domain, and actual case
+
+certain strategies are generalized best for certain problems, 
+however boundary cases and actual cases may prove otherwise, i.e. need to test based on prediction and intuition
+
+modifications of data representation/combination of strategy==utilizing space complexity for net benefit
+
+asked for min/max -> optimization

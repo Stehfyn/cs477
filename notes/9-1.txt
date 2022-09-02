@@ -1,0 +1,120 @@
+binary logarithm
+lg n = log2 n
+natural logarihtm
+ln n = loge n
+
+identities:
+log^k n = log n)^k
+loglog n = log(log n)
+
+log x^y = y log x
+log xy = log x + log y
+log x/y = log x - log y
+loga x = loga b logb x
+a^(logb^(x)) = x^(logb a)
+
+function pairs:
+f(n) = log n^2 g(n) = log n +5
+2 log n = log n +5
+log n = log n
+[theta] (==), f(n) = theta(g(n))
+
+f(n) = n; g(n) = log n^2
+n = 2 log n
+n = log n
+[omega] (>=) f(n) = omega(g(n))
+
+f(n) = log log n, g(n) = log n
+[0](<=) f(n) = O(g(n))
+
+f(n) = n, g(n) = log^2 n
+[omega](>=) f(n) = omega(g(n))
+
+f(n) = n log n +t n; g(n) = log n
+f(n) = omega(g(n))
+
+f(n) = 10; g(n) = log(10)
+f(n) = theta(g(n))
+asymptotically, they are equal, same order of growth
+
+f(n) = 2^n; g(n) = 10n^2
+f(n) = omega(g(n))
+
+f(n) = 2^n; g(n) = 3^n
+f(n) = O(g(n))
+
+take the limit of f/g , g/f
+
+O-Notation
+O(g(n)) = the set of functions with a smaller or same order of growth as g(n)
+O(g(n)) = {f(n) : there exist positive constants c and n0 such that 0 <= f(n) <= cg(n) for all n >= n0}
+g(n) is an asymptotic upper bound for f(n)
+
+solving formally demonstrates the upper bound truthness
+
+2n^2 = O(n^3) -prove
+there exists c, n0 such that 2n^2 <= cn^3 --> 2 <= cn --> c = 1 and n0 =2
+
+n^2 = O(n^2)
+there exists c, n0 such that n^2 <= cn^2 --> c>= 1 --> c =1 and n0 =1
+
+1000n^2+1000n = O(n^2)
+there exists c, n0 such that 1000n^2 + 1000n <= cn^2
+1000n^2 + 1000n <= 1000n^2 + 1000n^2 = 2000n^2 
+--> c=2000 and n0 = 1
+
+n=O(n^2)
+there exists c, n0 such that n<= cn^2 --> cn >= 1 --> c = 1 and n0 =1
+
+
+Omega-Notation
+Omega(g(n)) = {f(n): there exists positive constants c and n0 such that 0 <= cg(n) <= f(n) for all n>= n0}
+=the set of functions woth a larger or same order of growth as g(n)
+g(n) is an asymptotic lower bound to f(n)
+
+5n^2 = Omega(n)
+there exists c, n0 such that: 0 <= cn <= 5n^2 --> cn <= 5n^2 --> c = 1 and n0 =1
+
+100n + 5 != Omega(n^2)
+contradiction
+there exists c, n0 such that 0 <= cn^2 <= 100n + 5
+100n + 5,+ 100 + 5n(all n >= 1) = 105n
+
+cn^2 <= 105n --> n(cn-105) <= 0
+since n is positive --> cn- 105 <= 0 --> n <= 105/c
+--> contradiction: n cannot be smaller than a constant
+
+Theta-Notation
+theta(g(n)) = {f(n): there exist positive constantc c1, c2, and n0 such that 0 <= c1g(n)<= f(n)<=c2g(n) for all n >= n0}
+theta(g(n)) = the set of functions with the same order of growth as g(n)
+g(n) is asympototically tight bound for f(n)
+
+n^2/2  -   n/2 = theta(n^2) 
+there exists c, n0 such that c1n^2 <= n^2/2 - n/2 <= c2n^2
+n^2/2 -n/2 <= 1/2n^2; all n >=0 --> c2 = 1/2
+n^2/2 - n/2 >= n^2/2 - n/2 *n/2 (all n >= 2) = 1/4n^2 --> c1 = 1/4
+
+n != theta(n^2): there exists c, n0 such that c1 n^2 <= c <= c2 n^2
+only holds for n <= 1/c1
+
+6n^3 != theta(n^2)
+there exists c, n0 such that c1 n^2 <= 6n^3 <= c2n^2
+only holds for n <= c2 /6
+
+n != theta(logn)
+there exist c, n0 such that c1 log n <= n <=c2 log n
+--> c2 >= n/log n, all n >= n0 (impossible)
+
+there is no unique pair of n0, c in proving asymptotic bounds
+
+prove that 100n + 5 = O(n^2)
+100n + 5 = O(n^2)
+100n +5 <= 100n +n = 101n <= 101n^2
+n0 = 5, c= 101
+
+
+Theorem:
+f(n)=theta(g(n)) <--> f = O(g(n)) and f = omega (g(n))
+Transitivity:
+Reflexivity:
+Symmetry:
