@@ -1,0 +1,32 @@
+1:33 PM 9/8/2022
+
+Methods for solving recurrences, mothds for solving recursion running time
+
+iteration method
+substitution method
+recursion tree method
+master method(considered easiest, however caveated)
+
+Unless explicitly asked, use whichever you prefer
+
+T(n) = n + T(n-1)
+  
+Substitution method:
+	1. guess a sol
+		T(n)=O(g(n)) (upper bound)
+		asymptotic notation 
+	T(n) <= d g(n) for some d>0 and n >- n0
+	induct hypothesis T(k) <= d g(k) for all k < n
+	goal: find some values of the constants d and n0 for which the induction goal holds
+	2. use induction to prove
+
+
+complexity of recurrence too difficult to deduce,
+you can bound it by guess and check
+
+
+
+Recursion Tree
+	gives estimate, can be used as a input to substitution
+
+
